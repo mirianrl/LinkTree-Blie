@@ -1,5 +1,6 @@
 const botoesIdioma = document.querySelectorAll('.idioma');
 const botoesLinks = document.querySelectorAll('.link-card');
+const telinhaLinks = document.querySelector('.linktree');
 
 botoesIdioma.forEach((botao) => {
     botao.addEventListener('click', () => {
@@ -70,6 +71,7 @@ if ('IntersectionObserver' in window) {
             revelarProximo();
         }
     }, {
+        root: telinhaLinks,
         threshold: 0.18,
         rootMargin: '0px 0px -8% 0px'
     });
