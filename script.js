@@ -1,84 +1,127 @@
-const botoesIdioma = document.querySelectorAll('.idioma');
-const botoesLinks = document.querySelectorAll('.link-card');
+// ======================================================
+// BLIE HOTÉIS — SCRIPT
+// ======================================================
+
+
+// ------------------------------------------------------
+// TROCA DE IDIOMA
+// ------------------------------------------------------
+
+const botoesIdioma = document.querySelectorAll('.language-button');
 
 botoesIdioma.forEach((botao) => {
+
     botao.addEventListener('click', () => {
 
         const idioma = botao.dataset.lang;
 
-        // Remove o ativo de todos
+        // Remove o idioma ativo
         botoesIdioma.forEach((item) => {
-            item.classList.remove('ativo');
+            item.classList.remove('active');
         });
 
-        // Adiciona ativo no idioma escolhido
-        botao.classList.add('ativo');
+        // Ativa o idioma escolhido
+        botao.classList.add('active');
 
 
-        // Procura todos os elementos que possuem traduções
+        // Traduz todos os elementos
         const elementosTraduziveis = document.querySelectorAll(
             '[data-pt][data-en][data-es]'
         );
 
-
         elementosTraduziveis.forEach((elemento) => {
-            elemento.textContent = elemento.dataset[idioma];
-        });
 
+            const traducao = elemento.dataset[idioma];
 
-        // Atualiza o idioma da página
-        document.documentElement.lang =
-            idioma === 'pt'
-                ? 'pt-BR'
-                : idioma;
-    });
-});
-
-const revelarBotao = (botao, atraso = 0) => {
-    window.setTimeout(() => {
-        botao.classList.add('revelado');
-    }, atraso);
-};
-
-if ('IntersectionObserver' in window) {
-    const filaRevelacao = [];
-    let revelando = false;
-
-    const revelarProximo = () => {
-        if (!filaRevelacao.length) {
-            revelando = false;
-            return;
-        }
-
-        revelando = true;
-        revelarBotao(filaRevelacao.shift());
-
-        window.setTimeout(revelarProximo, 140);
-    };
-
-    const observadorLinks = new IntersectionObserver((entradas) => {
-        entradas.forEach((entrada) => {
-            if (!entrada.isIntersecting) {
-                return;
+            if (traducao) {
+                elemento.textContent = traducao;
             }
 
-            filaRevelacao.push(entrada.target);
-            observadorLinks.unobserve(entrada.target);
         });
 
-        if (!revelando) {
-            revelarProximo();
+
+        // Atualiza o idioma do HTML
+        if (idioma === 'pt') {
+            document.documentElement.lang = 'pt-BR';
         }
+
+        if (idioma === 'en') {
+            document.documentElement.lang = 'en';
+        }
+
+        if (idioma === 'es') {
+            document.documentElement.lang = 'es';
+        }
+
+    });
+
+});
+
+
+// ------------------------------------------------------
+// ANIMAÇÃO DOS BOTÕES AO APARECER
+// ------------------------------------------------------
+
+const botoesLinks = document.querySelectorAll('.link-button');
+
+if ('IntersectionObserver' in window) {
+
+    const observer = new IntersectionObserver((entradas) => {
+
+        const visiveis = entradas
+            .filter((entrada) => entrada.isIntersecting)
+            .sort((a, b) => {
+                return [...botoesLinks].indexOf(a.target)
+                    - [...botoesLinks].indexOf(b.target);
+            });
+
+        visiveis.forEach((entrada, indice) => {
+
+            setTimeout(() => {
+                entrada.target.classList.add('visible');
+            }, indice * 160);
+
+            observer.unobserve(entrada.target);
+
+        });
+
     }, {
-        threshold: 0.18,
-        rootMargin: '0px 0px -8% 0px'
+        threshold: 0.15
     });
 
     botoesLinks.forEach((botao) => {
-        observadorLinks.observe(botao);
+        observer.observe(botao);
     });
+
 } else {
+
     botoesLinks.forEach((botao, indice) => {
-        revelarBotao(botao, indice * 120);
+
+        setTimeout(() => {
+            botao.classList.add('visible');
+        }, indice * 160);
+
     });
+
 }
+
+
+// ------------------------------------------------------
+// EFEITO DE TOQUE NOS BOTÕES
+// ------------------------------------------------------
+
+botoesLinks.forEach((botao) => {
+
+    botao.addEventListener('pointerdown', () => {
+        botao.classList.add('pressed');
+    });
+
+    botao.addEventListener('pointerup', () => {
+        botao.classList.remove('pressed');
+    });
+
+    botao.addEventListener('pointerleave', () => {
+        botao.classList.remove('pressed');
+    });
+
+});

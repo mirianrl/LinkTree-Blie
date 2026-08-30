@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -10,342 +11,709 @@
 
     <meta
         name="description"
-        content="Blie Hotéis - Bonito, Mato Grosso do Sul"
+        content="Blie Hotéis - Bonito, Mato Grosso do Sul. Reservas, acomodações, localização e experiências em Bonito."
+    >
+
+    <meta
+        name="theme-color"
+        content="#082f53"
     >
 
     <title>Blie Hotéis | Bonito - MS</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- FAVICON -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="imagens/logo-blie.png"
+    >
+
+
+    <!-- GOOGLE FONTS -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&family=Sacramento&display=swap"
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&family=Sacramento&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Font Awesome -->
+
+    <!-- FONT AWESOME -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
 
+
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
+
 
 <body>
 
-    <main class="pagina-links">
 
-        <section class="linktree">
+    <!-- =====================================================
+         DECORAÇÃO EXTERNA
+    ====================================================== -->
 
-            <!-- =========================
-                 HERO / FOTO DO HOTEL
-            ========================== -->
-            <div class="hero">
+    <div class="background-decoration decoration-one"></div>
+    <div class="background-decoration decoration-two"></div>
 
-                <div class="hero-overlay"></div>
 
-                <!-- Idiomas -->
-                <div class="idiomas">
-                    <button class="idioma ativo" data-lang="pt">
+    <!-- =====================================================
+         PÁGINA
+    ====================================================== -->
+
+    <main class="page-wrapper">
+
+
+        <section class="blie-card">
+
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <header class="hero">
+
+
+                <!-- elementos decorativos -->
+                <div class="hero-shape shape-one"></div>
+                <div class="hero-shape shape-two"></div>
+
+                <div class="hero-line line-one"></div>
+                <div class="hero-line line-two"></div>
+
+
+                <!-- IDIOMAS -->
+
+                <nav
+                    class="language-switcher"
+                    aria-label="Selecionar idioma"
+                >
+
+                    <button
+                        type="button"
+                        class="language-button active"
+                        data-lang="pt"
+                        aria-label="Português"
+                    >
                         PT
                     </button>
 
-                    <span></span>
 
-                    <button class="idioma" data-lang="en">
-                         EN
+                    <span class="language-divider"></span>
+
+
+                    <button
+                        type="button"
+                        class="language-button"
+                        data-lang="en"
+                        aria-label="English"
+                    >
+                        EN
                     </button>
 
-                    <span></span>
 
-                    <button class="idioma" data-lang="es">
+                    <span class="language-divider"></span>
+
+
+                    <button
+                        type="button"
+                        class="language-button"
+                        data-lang="es"
+                        aria-label="Español"
+                    >
                         ES
                     </button>
-                </div>
 
-            </div>
-
-
-            <!-- =========================
-                 CONTEÚDO PRINCIPAL
-            ========================== -->
-            <div class="conteudo">
-
-                <!-- Logo -->
-                <div class="logo-wrapper">
-
-                    <div class="logo">
-                        <span>B</span>
-                    </div>
-
-                </div>
+                </nav>
 
 
-                <!-- Nome -->
-                <div class="marca">
 
-                    <h1>
-                        BLIE HOTÉIS
-                    </h1>
+                <!-- CONTEÚDO DO HERO -->
 
-                    <p class="localizacao-titulo">
-                        BONITO <span>•</span> MS
-                    </p>
-
-                </div>
+                <div class="hero-content">
 
 
-                <!-- Detalhe -->
-                <div class="detalhe">
+                    <!-- LOGO -->
 
-                    <span class="linha"></span>
+                    <div class="logo-area">
+                    <div class="logo-glow"></div>
 
-                    <i class="fa-solid fa-leaf"></i>
-
-                    <span class="linha"></span>
-
-                </div>
-
-
-                <!-- Frase -->
-                <p
-                    class="descricao"
-                    data-pt="Sua melhor experiência em Bonito começa aqui."
-                    data-en="Your best experience in Bonito starts here."
-                    data-es="Tu mejor experiencia en Bonito comienza aquí."
-                >
-                    Sua melhor experiência em Bonito começa aqui.
-                </p>
-
-
-                <!-- =========================
-                     LINKS
-                ========================== -->
-                <div class="links">
-
-
-                    <!-- RESERVA -->
-                    <a
-                        href="https://hotels.cloudbeds.com/pt-br/reservas/p98p7k?promo=OfertaPix15&currency=brl"
-                        class="link-card link-destaque"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <img
+                        src="imagens/logo-blie.png"
+                        alt="Blie Hotéis"
+                        class="logo-blie"
                     >
-
-                    <div class="icone">
-                        <i class="fa-regular fa-calendar-check"></i>
-                    </div>
-
-                    <span
-                        data-pt="Reserve sua hospedagem"
-                        data-en="Book your stay"
-                        data-es="Reserva tu estadía"
-                    >
-                        Reserve sua hospedagem
-                    </span>
-
-                        <i class="fa-solid fa-chevron-right seta"></i>
-
-                    </a>
+                </div>
 
 
-                    <!-- WHATSAPP -->
-                    <a
-                        href="https://wa.me/556720360011"
-                        class="link-card"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
 
-                        <div class="icone whatsapp">
+                    <!-- LOCALIZAÇÃO -->
 
-                            <i class="fa-brands fa-whatsapp"></i>
+                    <div class="hotel-location">
 
-                        </div>
+                        <i class="fa-solid fa-location-dot"></i>
 
                         <span
+                            data-pt="Bonito • Mato Grosso do Sul"
+                            data-en="Bonito • Mato Grosso do Sul"
+                            data-es="Bonito • Mato Grosso do Sul"
+                        >
+                            Bonito • Mato Grosso do Sul
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- FRASE -->
+
+                    <h1
+                        class="hero-title"
+                        data-pt="Sua experiência em Bonito começa aqui."
+                        data-en="Your experience in Bonito starts here."
+                        data-es="Tu experiencia en Bonito comienza aquí."
+                    >
+                        Sua experiência em Bonito começa aqui.
+                    </h1>
+
+
+
+                    <p
+                        class="hero-description"
+                        data-pt="Hospedagem, conforto e experiências para tornar sua viagem ainda mais especial."
+                        data-en="Comfort, hospitality and experiences to make your trip even more special."
+                        data-es="Comodidad, hospitalidad y experiencias para hacer tu viaje aún más especial."
+                    >
+                        Hospedagem, conforto e experiências para tornar sua viagem ainda mais especial.
+                    </p>
+
+
+
+                    <!-- ORNAMENTO -->
+
+                    <div class="hero-ornament">
+
+                        <span></span>
+
+                        <i class="fa-solid fa-water"></i>
+
+                        <span></span>
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 LINKS
+            ================================================== -->
+
+            <section class="links-section">
+
+
+                <!-- =============================================
+                     BOTÃO PRINCIPAL
+                ============================================== -->
+
+                <a
+                    href="https://hotels.cloudbeds.com/pt-br/reservas/p98p7k?promo=OfertaPix15&currency=brl"
+                    class="link-button primary-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+
+                    <div class="button-icon primary-icon">
+
+                        <i class="fa-regular fa-calendar-check"></i>
+
+                    </div>
+
+
+                    <div class="button-content">
+
+                        <span
+                            class="button-label"
+                            data-pt="RESERVAS"
+                            data-en="BOOKING"
+                            data-es="RESERVAS"
+                        >
+                            RESERVAS
+                        </span>
+
+
+                        <strong
+                            data-pt="Reserve sua hospedagem"
+                            data-en="Book your stay"
+                            data-es="Reserva tu hospedaje"
+                        >
+                            Reserve sua hospedagem
+                        </strong>
+
+                    </div>
+
+
+                    <div class="button-arrow primary-arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- =============================================
+                     WHATSAPP
+                ============================================== -->
+
+                <a
+                    href="https://wa.me/556720360011"
+                    class="link-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+
+                    <div class="button-icon whatsapp-icon">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </div>
+
+
+                    <div class="button-content">
+
+                        <span
+                            class="button-label"
+                            data-pt="ATENDIMENTO"
+                            data-en="CONTACT"
+                            data-es="CONTACTO"
+                        >
+                            ATENDIMENTO
+                        </span>
+
+
+                        <strong
                             data-pt="Fale conosco no WhatsApp"
                             data-en="Contact us on WhatsApp"
                             data-es="Habla con nosotros por WhatsApp"
                         >
                             Fale conosco no WhatsApp
-                        </span>
+                        </strong>
 
-                        <i class="fa-solid fa-chevron-right seta"></i>
-
-                    </a>
+                    </div>
 
 
-                    <!-- ACOMODAÇÕES -->
-                    <a
-                        href="https://bliehoteis.com.br/quartos"
-                        class="link-card"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <div class="button-arrow">
 
-                    <div class="icone">
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- =============================================
+                     ACOMODAÇÕES
+                ============================================== -->
+
+                <a
+                    href="https://bliehoteis.com.br/quartos"
+                    class="link-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+
+                    <div class="button-icon">
+
                         <i class="fa-solid fa-bed"></i>
+
                     </div>
 
-                    <span
-                        data-pt="Conheça nossas acomodações"
-                        data-en="Discover our rooms"
-                        data-es="Conoce nuestras habitaciones"
-                    >
-                        Conheça nossas acomodações
-                    </span>
 
-                    <i class="fa-solid fa-chevron-right seta"></i>
-
-                    </a>
-
-
-                    <!-- CAFÉ DA MANHÃ -->
-                    <a
-                        href="https://bliehoteis.com.br/cafe-da-manha"
-                        class="link-card"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                    <div class="icone">
-                        <i class="fa-solid fa-mug-hot"></i>
-                    </div>
-
-                    <span
-                        data-pt="Conheça nosso café da manhã"
-                        data-en="Discover our breakfast"
-                        data-es="Conoce nuestro desayuno"
-                    >
-                        Conheça nosso café da manhã
-                    </span>
-
-                        <i class="fa-solid fa-chevron-right seta"></i>
-
-                    </a>
-
-
-                    <!-- PASSEIOS -->
-                    <a
-                        href="https://bliehoteis.com.br/destino-bonito"
-                        class="link-card"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                    <div class="icone">
-                        <i class="fa-regular fa-camera"></i>
-                    </div>
-
-                    <span
-                        data-pt="Passeios em Bonito"
-                        data-en="Tours in Bonito"
-                        data-es="Tours en Bonito"
-                    >
-                        Passeios em Bonito
-                    </span>
-
-                        <i class="fa-solid fa-chevron-right seta"></i>
-
-                    </a>
-
-
-                    <!-- LOCALIZAÇÃO -->
-                    <a
-                        href="https://www.google.com/maps/search/?api=1&query=Blie+Hot%C3%A9is%2C+Rua+Luiz+da+Costa+Leite%2C+2085%2C+Centro%2C+Bonito+-+MS"
-                        class="link-card"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                    <div class="icone localizacao">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-
-                    <span
-                        data-pt="Como chegar"
-                        data-en="How to get here"
-                        data-es="Cómo llegar"
-                    >
-                        Como chegar
-                    </span>
-
-                        <i class="fa-solid fa-chevron-right seta"></i>
-
-                    </a>
-
-
-                    <!-- SITE OFICIAL -->
-                    <a
-                        href="https://bliehoteis.com.br/"
-                        class="link-card"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                        <div class="icone">
-
-                            <i class="fa-solid fa-globe"></i>
-
-                        </div>
+                    <div class="button-content">
 
                         <span
-                            data-pt="Site oficial"
-                            data-en="Official website"
-                            data-es="Sitio oficial"
+                            class="button-label"
+                            data-pt="ACOMODAÇÕES"
+                            data-en="ROOMS"
+                            data-es="HABITACIONES"
                         >
-                            Site oficial
+                            ACOMODAÇÕES
                         </span>
 
-                        <i class="fa-solid fa-chevron-right seta"></i>
 
-                    </a>
+                        <strong
+                            data-pt="Conheça nossas acomodações"
+                            data-en="Discover our rooms"
+                            data-es="Conoce nuestras habitaciones"
+                        >
+                            Conheça nossas acomodações
+                        </strong>
+
+                    </div>
 
 
-                    <!-- INSTAGRAM -->
-                    <a
-                        href="https://www.instagram.com/bliehoteisbonitoms/"
-                        class="link-card"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <div class="button-arrow">
 
-                        <div class="icone instagram">
+                        <i class="fa-solid fa-chevron-right"></i>
 
-                            <i class="fa-brands fa-instagram"></i>
+                    </div>
 
-                        </div>
 
-                        <span>
+                </a>
+
+
+
+                <!-- =============================================
+                     CAFÉ DA MANHÃ
+                ============================================== -->
+
+                <a
+                    href="https://bliehoteis.com.br/cafe-da-manha"
+                    class="link-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+
+                    <div class="button-icon">
+
+                        <i class="fa-solid fa-mug-hot"></i>
+
+                    </div>
+
+
+                    <div class="button-content">
+
+                        <span
+                            class="button-label"
+                            data-pt="EXPERIÊNCIA"
+                            data-en="EXPERIENCE"
+                            data-es="EXPERIENCIA"
+                        >
+                            EXPERIÊNCIA
+                        </span>
+
+
+                        <strong
+                            data-pt="Conheça nosso café da manhã"
+                            data-en="Discover our breakfast"
+                            data-es="Conoce nuestro desayuno"
+                        >
+                            Conheça nosso café da manhã
+                        </strong>
+
+                    </div>
+
+
+                    <div class="button-arrow">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- =============================================
+                     PASSEIOS
+                ============================================== -->
+
+                <a
+                    href="https://bliehoteis.com.br/destino-bonito"
+                    class="link-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+
+                    <div class="button-icon">
+
+                        <i class="fa-solid fa-camera-retro"></i>
+
+                    </div>
+
+
+                    <div class="button-content">
+
+                        <span
+                            class="button-label"
+                            data-pt="DESTINO"
+                            data-en="DESTINATION"
+                            data-es="DESTINO"
+                        >
+                            DESTINO
+                        </span>
+
+
+                        <strong
+                            data-pt="Passeios em Bonito"
+                            data-en="Tours in Bonito"
+                            data-es="Tours en Bonito"
+                        >
+                            Passeios em Bonito
+                        </strong>
+
+                    </div>
+
+
+                    <div class="button-arrow">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- =============================================
+                     GOOGLE MAPS
+                ============================================== -->
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Blie+Hot%C3%A9is%2C+Rua+Luiz+da+Costa+Leite%2C+2085%2C+Centro%2C+Bonito+-+MS"
+                    class="link-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+
+                    <div class="button-icon location-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+
+                    <div class="button-content">
+
+                        <span
+                            class="button-label"
+                            data-pt="LOCALIZAÇÃO"
+                            data-en="LOCATION"
+                            data-es="UBICACIÓN"
+                        >
+                            LOCALIZAÇÃO
+                        </span>
+
+
+                        <strong
+                            data-pt="Como chegar"
+                            data-en="How to get here"
+                            data-es="Cómo llegar"
+                        >
+                            Como chegar
+                        </strong>
+
+                    </div>
+
+
+                    <div class="button-arrow">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- =============================================
+                     SITE
+                ============================================== -->
+
+                <a
+                    href="https://bliehoteis.com.br/"
+                    class="link-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+
+                    <div class="button-icon">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                    </div>
+
+
+                    <div class="button-content">
+
+                        <span
+                            class="button-label"
+                            data-pt="BLIE HOTÉIS"
+                            data-en="BLIE HOTÉIS"
+                            data-es="BLIE HOTÉIS"
+                        >
+                            BLIE HOTÉIS
+                        </span>
+
+
+                        <strong
+                            data-pt="Visite nosso site oficial"
+                            data-en="Visit our official website"
+                            data-es="Visita nuestro sitio oficial"
+                        >
+                            Visite nosso site oficial
+                        </strong>
+
+                    </div>
+
+
+                    <div class="button-arrow">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- =============================================
+                     INSTAGRAM
+                ============================================== -->
+
+                <a
+                    href="https://www.instagram.com/bliehoteisbonitoms/"
+                    class="link-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+
+                    <div class="button-icon instagram-icon">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </div>
+
+
+                    <div class="button-content">
+
+                        <span
+                            class="button-label"
+                            data-pt="REDES SOCIAIS"
+                            data-en="SOCIAL MEDIA"
+                            data-es="REDES SOCIALES"
+                        >
+                            REDES SOCIAIS
+                        </span>
+
+
+                        <strong>
                             Instagram
-                        </span>
+                        </strong>
 
-                        <i class="fa-solid fa-chevron-right seta"></i>
+                    </div>
 
-                    </a>
+
+                    <div class="button-arrow">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </div>
+
+
+                </a>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MINI DESTAQUE
+            ================================================== -->
+
+            <section class="bonito-highlight">
+
+
+                <div class="highlight-icon">
+
+                    <i class="fa-solid fa-leaf"></i>
 
                 </div>
 
-            </div>
 
+                <div class="highlight-text">
 
-            <!-- =========================
-                 RODAPÉ
-            ========================== -->
-            <footer class="footer">
+                    <span
+                        data-pt="DESCUBRA BONITO"
+                        data-en="DISCOVER BONITO"
+                        data-es="DESCUBRE BONITO"
+                    >
+                        DESCUBRA BONITO
+                    </span>
 
-                <div class="onda onda-1"></div>
-
-                <div class="onda onda-2"></div>
-
-
-                <div class="footer-conteudo">
 
                     <p
+                        data-pt="Natureza, experiências e momentos inesquecíveis."
+                        data-en="Nature, experiences and unforgettable moments."
+                        data-es="Naturaleza, experiencias y momentos inolvidables."
+                    >
+                        Natureza, experiências e momentos inesquecíveis.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+
+                <div class="footer-shape"></div>
+
+
+                <div class="footer-content">
+
+
+                    <div class="footer-line"></div>
+
+
+                    <p
+                        class="footer-message"
                         data-pt="Viva Bonito."
                         data-en="Experience Bonito."
                         data-es="Vive Bonito."
@@ -353,19 +721,72 @@
                         Viva Bonito.
                     </p>
 
-                    <i class="fa-solid fa-leaf"></i>
+
+
+                    <div class="footer-socials">
+
+
+                        <a
+                            href="https://www.instagram.com/bliehoteisbonitoms/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                        >
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/556720360011"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp"
+                        >
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://bliehoteis.com.br/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Site oficial"
+                        >
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+
+                    <span class="footer-hotel">
+                        BLIE HOTÉIS • BONITO MS
+                    </span>
+
 
                 </div>
 
+
             </footer>
 
+
         </section>
+
 
     </main>
 
 
-    <!-- JS -->
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
+
 </body>
+
 </html>
